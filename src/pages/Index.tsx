@@ -1,7 +1,11 @@
 import HeroSection from "@/components/HeroSection";
 import FeaturesSection from "@/components/FeaturesSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
+import FeaturedPropertiesSection from "@/components/FeaturedPropertiesSection";
+import EnhancedTestimonialsSection from "@/components/EnhancedTestimonialsSection";
+import TrustedPartnersSection from "@/components/TrustedPartnersSection";
+import StatsSection from "@/components/StatsSection";
 import AppPreviewSection from "@/components/AppPreviewSection";
+import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -9,8 +13,12 @@ const Index = () => {
     <div className="min-h-screen">
       <HeroSection />
       <FeaturesSection />
-      <TestimonialsSection />
+      <FeaturedPropertiesSection />
+      <EnhancedTestimonialsSection />
+      <TrustedPartnersSection />
+      <StatsSection />
       <AppPreviewSection />
+      <CTASection />
       <Footer />
     </div>
   );
