@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import statsBgIllustration from "@/assets/stats-bg-illustration.jpg";
 
 const stats = [
   {
@@ -46,23 +47,25 @@ const stats = [
 const StatsSection = () => {
   return (
     <section className="py-24 relative overflow-hidden">
-      {/* Modern gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-foreground via-foreground/95 to-foreground/90"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.1),transparent_50%)]"></div>
+      {/* Stunning illustration background */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${statsBgIllustration})` }}
+      ></div>
+      <div className="absolute inset-0 bg-background/60 backdrop-blur-sm"></div>
       
-      {/* Geometric patterns */}
-      <div className="absolute top-20 left-20 w-32 h-32 border border-white/10 rounded-full"></div>
-      <div className="absolute bottom-20 right-20 w-24 h-24 border border-white/20 rounded-full"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-white/5 rounded-full"></div>
+      {/* Floating geometric decorations */}
+      <div className="absolute top-20 left-20 w-16 h-16 bg-primary/20 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-20 right-20 w-12 h-12 bg-accent/30 rounded-full animate-bounce delay-1000"></div>
+      <div className="absolute top-1/3 right-1/4 w-8 h-8 bg-secondary/40 rounded-full animate-ping delay-500"></div>
       
       <div className="container mx-auto px-6 lg:px-8 relative">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Trusted by Thousands
           </h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Our platform has become the preferred choice for discerning renters and property owners worldwide.
           </p>
         </div>
@@ -75,25 +78,25 @@ const StatsSection = () => {
               className="group animate-fade-in"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="relative p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-500 hover:scale-105">
+              <div className="relative p-8 rounded-2xl bg-card/80 backdrop-blur-md border border-border hover:bg-card/90 transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-xl">
                 {/* Icon */}
-                <div className="text-white/90 mb-6 group-hover:text-white transition-colors duration-300 group-hover:scale-110 transform transition-transform">
+                <div className="text-primary mb-6 group-hover:text-primary/80 transition-colors duration-300 group-hover:scale-110 transform transition-transform">
                   {stat.icon}
                 </div>
                 
                 {/* Number */}
-                <div className="text-4xl lg:text-5xl font-bold text-white mb-2 group-hover:scale-105 transition-transform duration-300">
+                <div className="text-4xl lg:text-5xl font-bold text-foreground mb-2 group-hover:scale-105 transition-transform duration-300">
                   {stat.number}
                   {stat.label === "Average Rating" && <span className="text-2xl">★</span>}
                 </div>
                 
                 {/* Label */}
-                <div className="text-lg font-semibold text-white/90 mb-2">
+                <div className="text-lg font-semibold text-foreground mb-2">
                   {stat.label}
                 </div>
                 
                 {/* Description */}
-                <div className="text-sm text-white/70">
+                <div className="text-sm text-muted-foreground">
                   {stat.description}
                 </div>
 
@@ -106,12 +109,12 @@ const StatsSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16 animate-fade-in" style={{ animationDelay: "0.8s" }}>
-          <p className="text-white/80 text-lg mb-6">
+          <p className="text-muted-foreground text-lg mb-6">
             Join thousands of satisfied users who've found their perfect home
           </p>
           <Button 
             size="lg" 
-            className="bg-white text-foreground hover:bg-white/90 px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            className="px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
           >
             Start Your Journey
           </Button>
