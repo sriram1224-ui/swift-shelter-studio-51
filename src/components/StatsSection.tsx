@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import statsBgIllustration from "@/assets/stats-bg-illustration.jpg";
+import statsIllustration from "@/assets/stats-family-illustration.png";
 
 const stats = [
   {
@@ -46,13 +46,15 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
-      {/* Stunning illustration background */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${statsBgIllustration})` }}
-      ></div>
-      <div className="absolute inset-0 bg-background/60 backdrop-blur-sm"></div>
+    <section className="py-24 relative overflow-hidden bg-gradient-to-br from-background via-background/50 to-secondary/10">
+      {/* Central illustration */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-5">
+        <img 
+          src={statsIllustration} 
+          alt="Family with house illustration" 
+          className="w-96 h-96 object-contain"
+        />
+      </div>
       
       {/* Floating geometric decorations */}
       <div className="absolute top-20 left-20 w-16 h-16 bg-primary/20 rounded-full animate-pulse"></div>
