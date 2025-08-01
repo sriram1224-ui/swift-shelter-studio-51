@@ -19,34 +19,27 @@ const LuxuryPropertiesSection = () => {
           </p>
         </div>
 
-        {/* Main Villa Showcase */}
-        <div className="relative max-w-6xl mx-auto animate-fade-in" style={{ animationDelay: "0.3s" }}>
-          <div className="relative rounded-3xl overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] group">
-            {/* Villa Image with Overlay */}
-            <div className="relative h-[600px] lg:h-[700px]">
-              <img 
-                src="/lovable-uploads/51faf773-5ee9-4e4e-98d8-fa7f3708da4b.png"
-                alt="Luxury Modern Villa with Pool"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              
-              {/* Dark Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30"></div>
-              
-              {/* Luxury Badge */}
-              <Badge className="absolute top-8 left-8 bg-primary text-white px-4 py-2 text-sm font-semibold">
-                ✨ Ultra Luxury
-              </Badge>
-              
-              {/* Price Tag */}
-              <div className="absolute top-8 right-8 bg-white/95 backdrop-blur-sm rounded-2xl px-6 py-3 shadow-lg">
-                <div className="text-2xl font-bold text-primary">$12,500</div>
-                <div className="text-sm text-warm-gray">per month</div>
-              </div>
+        {/* Genius Grid Layout */}
+        <div className="grid gap-8 max-w-7xl mx-auto">
+          {/* Row 1: Large featured property */}
+          <div className="relative h-[600px] lg:h-[700px] rounded-3xl overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] group animate-fade-in">
+            <img 
+              src="/lovable-uploads/51faf773-5ee9-4e4e-98d8-fa7f3708da4b.png"
+              alt="Luxury Modern Villa with Pool"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30"></div>
+            
+            <Badge className="absolute top-8 left-8 bg-primary text-white px-4 py-2 text-sm font-semibold">
+              ✨ Ultra Luxury
+            </Badge>
+            
+            <div className="absolute top-8 right-8 bg-white/95 backdrop-blur-sm rounded-2xl px-6 py-3 shadow-lg">
+              <div className="text-2xl font-bold text-primary">$12,500</div>
+              <div className="text-sm text-warm-gray">per month</div>
             </div>
 
-            {/* Property Information Overlay */}
             <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
               <div className="max-w-4xl">
                 <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -54,10 +47,9 @@ const LuxuryPropertiesSection = () => {
                 </h3>
                 <p className="text-lg text-gray-200 mb-6 max-w-2xl">
                   A stunning contemporary villa featuring floor-to-ceiling windows, 
-                  infinity pool, and panoramic views. Perfect blend of luxury and minimalist design.
+                  infinity pool, and panoramic views.
                 </p>
                 
-                {/* Property Features */}
                 <div className="flex flex-wrap gap-6 mb-8 text-white">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -75,13 +67,8 @@ const LuxuryPropertiesSection = () => {
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <span className="text-sm font-medium">Infinity Pool</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-sm font-medium">Ocean Views</span>
-                  </div>
                 </div>
 
-                {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
                     size="lg" 
@@ -97,6 +84,85 @@ const LuxuryPropertiesSection = () => {
                     View Floor Plans
                   </Button>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 2: Two properties side by side */}
+          <div className="grid lg:grid-cols-2 gap-8 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+            {/* Property 2 */}
+            <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-[0_20px_40px_-12px_rgba(0,0,0,0.25)] group">
+              <img 
+                src="/lovable-uploads/2eb21b37-beda-4d46-94b0-55a27c511dda.png"
+                alt="Luxury Villa with Infinity Pool"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              
+              <Badge className="absolute top-6 left-6 bg-accent text-accent-foreground px-3 py-1 text-xs font-semibold">
+                🏊 Pool Villa
+              </Badge>
+              
+              <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2 shadow-lg">
+                <div className="text-xl font-bold text-primary">$18,900</div>
+                <div className="text-xs text-warm-gray">per month</div>
+              </div>
+
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h4 className="text-2xl font-bold text-white mb-2">
+                  Twilight Paradise Villa
+                </h4>
+                <p className="text-sm text-gray-200 mb-4">
+                  Ultra-modern villa with infinity pool and evening entertainment spaces.
+                </p>
+                
+                <div className="flex flex-wrap gap-4 mb-4 text-white text-xs">
+                  <span>6 Bedrooms</span>
+                  <span>5 Bathrooms</span>
+                  <span>6,200 sqft</span>
+                </div>
+
+                <Button size="sm" className="bg-primary hover:bg-primary/90 text-white rounded-lg">
+                  Explore Property
+                </Button>
+              </div>
+            </div>
+
+            {/* Property 3 */}
+            <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-[0_20px_40px_-12px_rgba(0,0,0,0.25)] group">
+              <img 
+                src="/lovable-uploads/a1946347-7290-461a-bb16-d0db2fc9e1e0.png"
+                alt="Contemporary Glass House"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              
+              <Badge className="absolute top-6 left-6 bg-secondary text-secondary-foreground px-3 py-1 text-xs font-semibold">
+                🌿 Eco-Luxury
+              </Badge>
+              
+              <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2 shadow-lg">
+                <div className="text-xl font-bold text-primary">$15,600</div>
+                <div className="text-xs text-warm-gray">per month</div>
+              </div>
+
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h4 className="text-2xl font-bold text-white mb-2">
+                  Glass House Sanctuary
+                </h4>
+                <p className="text-sm text-gray-200 mb-4">
+                  Contemporary architecture blending seamlessly with nature.
+                </p>
+                
+                <div className="flex flex-wrap gap-4 mb-4 text-white text-xs">
+                  <span>4 Bedrooms</span>
+                  <span>3 Bathrooms</span>
+                  <span>3,800 sqft</span>
+                </div>
+
+                <Button size="sm" className="bg-primary hover:bg-primary/90 text-white rounded-lg">
+                  Explore Property
+                </Button>
               </div>
             </div>
           </div>
