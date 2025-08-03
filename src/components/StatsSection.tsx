@@ -46,80 +46,107 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="py-24 relative overflow-hidden bg-gradient-to-br from-background via-background/50 to-secondary/10">
-      {/* Central illustration */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-5">
-        <img 
-          src={statsIllustration} 
-          alt="Family with house illustration" 
-          className="w-96 h-96 object-contain"
-        />
+    <section className="py-32 relative overflow-hidden">
+      {/* Hero background with family illustration */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5">
+        <div className="absolute inset-0 flex items-center justify-center opacity-8">
+          <img 
+            src={statsIllustration} 
+            alt="Family with house illustration" 
+            className="w-full h-full max-w-2xl object-contain"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/60 to-background/90"></div>
       </div>
       
-      {/* Floating geometric decorations */}
-      <div className="absolute top-20 left-20 w-16 h-16 bg-primary/20 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-20 right-20 w-12 h-12 bg-accent/30 rounded-full animate-bounce delay-1000"></div>
-      <div className="absolute top-1/3 right-1/4 w-8 h-8 bg-secondary/40 rounded-full animate-ping delay-500"></div>
+      {/* Enhanced floating decorations */}
+      <div className="absolute top-20 left-20 w-24 h-24 bg-primary/10 rounded-full animate-pulse blur-sm"></div>
+      <div className="absolute bottom-20 right-20 w-20 h-20 bg-accent/15 rounded-full animate-bounce delay-1000 blur-sm"></div>
+      <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-secondary/20 rounded-full animate-ping delay-500 blur-sm"></div>
+      <div className="absolute bottom-1/3 left-1/4 w-12 h-12 bg-primary/15 rounded-full animate-pulse delay-700 blur-sm"></div>
       
       <div className="container mx-auto px-6 lg:px-8 relative">
-        {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Trusted by Thousands
+        {/* Enhanced Section Header */}
+        <div className="text-center mb-20 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            Platform Excellence
+          </div>
+          <h2 className="text-5xl lg:text-7xl font-bold text-foreground mb-6 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text">
+            Proven Results
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Our platform has become the preferred choice for discerning renters and property owners worldwide.
+          <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Numbers that speak for themselves — join a community that's revolutionizing the rental experience.
           </p>
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        {/* Enhanced Stats Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-20">
           {stats.map((stat, index) => (
             <div 
               key={index}
               className="group animate-fade-in"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="relative p-8 rounded-2xl bg-card/80 backdrop-blur-md border border-border hover:bg-card/90 transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-xl">
-                {/* Icon */}
-                <div className="text-primary mb-6 group-hover:text-primary/80 transition-colors duration-300 group-hover:scale-110 transform transition-transform">
+              <div className="relative p-10 rounded-3xl bg-card/90 backdrop-blur-xl border border-border/50 hover:bg-card transition-all duration-700 hover:scale-110 hover:rotate-1 shadow-2xl hover:shadow-3xl group-hover:border-primary/30">
+                {/* Enhanced Icon */}
+                <div className="text-primary mb-8 group-hover:text-primary/90 transition-all duration-500 group-hover:scale-125 transform flex justify-center">
                   {stat.icon}
                 </div>
                 
-                {/* Number */}
-                <div className="text-4xl lg:text-5xl font-bold text-foreground mb-2 group-hover:scale-105 transition-transform duration-300">
-                  {stat.number}
-                  {stat.label === "Average Rating" && <span className="text-2xl">★</span>}
+                {/* Enhanced Number with counter effect */}
+                <div className="text-5xl lg:text-6xl font-black text-foreground mb-4 group-hover:scale-110 transition-transform duration-500 text-center">
+                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    {stat.number}
+                  </span>
+                  {stat.label === "Average Rating" && <span className="text-3xl text-yellow-500">★</span>}
                 </div>
                 
-                {/* Label */}
-                <div className="text-lg font-semibold text-foreground mb-2">
+                {/* Enhanced Label */}
+                <div className="text-xl font-bold text-foreground mb-3 text-center group-hover:text-primary transition-colors duration-300">
                   {stat.label}
                 </div>
                 
-                {/* Description */}
-                <div className="text-sm text-muted-foreground">
+                {/* Enhanced Description */}
+                <div className="text-muted-foreground text-center leading-relaxed">
                   {stat.description}
                 </div>
 
-                {/* Decorative element */}
-                <div className="absolute -top-2 -right-2 w-4 h-4 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* Enhanced decorative elements */}
+                <div className="absolute -top-3 -right-3 w-6 h-6 bg-gradient-to-r from-primary to-accent rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
+                <div className="absolute -bottom-3 -left-3 w-4 h-4 bg-gradient-to-r from-accent to-primary rounded-full opacity-0 group-hover:opacity-80 transition-all duration-700 animate-bounce"></div>
+                
+                {/* Gradient border effect */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-primary/20 via-transparent to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16 animate-fade-in" style={{ animationDelay: "0.8s" }}>
-          <p className="text-muted-foreground text-lg mb-6">
-            Join thousands of satisfied users who've found their perfect home
-          </p>
-          <Button 
-            size="lg" 
-            className="px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Start Your Journey
-          </Button>
+        {/* Enhanced Bottom CTA */}
+        <div className="text-center animate-fade-in" style={{ animationDelay: "0.8s" }}>
+          <div className="max-w-4xl mx-auto p-12 rounded-3xl bg-gradient-to-r from-primary/5 via-background/80 to-accent/5 backdrop-blur-xl border border-border/30">
+            <p className="text-2xl text-muted-foreground mb-8 leading-relaxed">
+              Ready to become part of our success story?
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button 
+                size="lg" 
+                className="px-12 py-4 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 bg-gradient-to-r from-primary to-primary/90"
+              >
+                Join the Community
+              </Button>
+              <Button 
+                variant="outline"
+                size="lg" 
+                className="px-12 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105"
+              >
+                View Success Stories
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
