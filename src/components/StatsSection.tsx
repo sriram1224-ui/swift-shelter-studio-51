@@ -59,11 +59,11 @@ const StatsSection = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/60 to-background/90"></div>
       </div>
       
-      {/* Enhanced floating decorations */}
-      <div className="absolute top-20 left-20 w-24 h-24 bg-primary/10 rounded-full animate-pulse blur-sm"></div>
-      <div className="absolute bottom-20 right-20 w-20 h-20 bg-accent/15 rounded-full animate-bounce delay-1000 blur-sm"></div>
-      <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-secondary/20 rounded-full animate-ping delay-500 blur-sm"></div>
-      <div className="absolute bottom-1/3 left-1/4 w-12 h-12 bg-primary/15 rounded-full animate-pulse delay-700 blur-sm"></div>
+      {/* Subtle floating decorations */}
+      <div className="absolute top-20 left-20 w-16 h-16 bg-primary/5 rounded-full blur-sm"></div>
+      <div className="absolute bottom-20 right-20 w-12 h-12 bg-accent/5 rounded-full blur-sm"></div>
+      <div className="absolute top-1/3 right-1/4 w-10 h-10 bg-secondary/5 rounded-full blur-sm"></div>
+      <div className="absolute bottom-1/3 left-1/4 w-8 h-8 bg-primary/5 rounded-full blur-sm"></div>
       
       <div className="container mx-auto px-6 lg:px-8 relative">
         {/* Enhanced Section Header */}
@@ -90,7 +90,7 @@ const StatsSection = () => {
               className="group animate-fade-in"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="relative p-10 rounded-3xl bg-card/90 backdrop-blur-xl border border-border/50 hover:bg-card transition-all duration-700 hover:scale-110 hover:rotate-1 shadow-2xl hover:shadow-3xl group-hover:border-primary/30">
+              <div className="relative p-10 rounded-3xl bg-card/90 backdrop-blur-xl border border-border/50 hover:bg-card transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-xl group-hover:border-primary/30">
                 {/* Enhanced Icon */}
                 <div className="text-primary mb-8 group-hover:text-primary/90 transition-all duration-500 group-hover:scale-125 transform flex justify-center">
                   {stat.icon}
@@ -114,9 +114,9 @@ const StatsSection = () => {
                   {stat.description}
                 </div>
 
-                {/* Enhanced decorative elements */}
-                <div className="absolute -top-3 -right-3 w-6 h-6 bg-gradient-to-r from-primary to-accent rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
-                <div className="absolute -bottom-3 -left-3 w-4 h-4 bg-gradient-to-r from-accent to-primary rounded-full opacity-0 group-hover:opacity-80 transition-all duration-700 animate-bounce"></div>
+                {/* Subtle decorative elements */}
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-primary to-accent rounded-full opacity-0 group-hover:opacity-60 transition-all duration-500"></div>
+                <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-r from-accent to-primary rounded-full opacity-0 group-hover:opacity-40 transition-all duration-500"></div>
                 
                 {/* Gradient border effect */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-primary/20 via-transparent to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
